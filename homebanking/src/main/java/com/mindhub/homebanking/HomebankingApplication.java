@@ -8,7 +8,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
+<<<<<<< HEAD
 
+=======
+>>>>>>> 1d3548077929eb6e3396660c89db236faec4138e
 public class HomebankingApplication {
 
 	public static void main(String[] args) {
