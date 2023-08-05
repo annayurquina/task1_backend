@@ -8,7 +8,9 @@ import javax.persistence.*;
 public class Client {
     @Id
     @Column(name="_id")
-    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    //@GeneratedValue(strategy=GenerationType.IDENTITY)
+    @GeneratedValue(strategy=GenerationType.AUTO,generator="native")
+    @GenericGenerator(name = "native", strategy = "increment")
     private Long _id;
     private String firstName;
     private String lastName;
