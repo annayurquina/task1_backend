@@ -1,5 +1,6 @@
 package com.mindhub.homebanking.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
@@ -8,7 +9,7 @@ import java.time.LocalDate;
 @Entity
 public class Account {
     @Id
-    @Column(name="id")
+    //@Column(name="id")
     //@GeneratedValue(strategy=GenerationType.IDENTITY)
     @GeneratedValue(strategy= GenerationType.AUTO,generator="native")
     @GenericGenerator(name = "native", strategy = "native")
@@ -18,7 +19,7 @@ public class Account {
     private double balance;
 
     @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name="Client_id")
+    @JoinColumn(name="client_id")
     private Client myClient;
 
     public Account() {
@@ -58,7 +59,7 @@ public class Account {
     public void setBalance(double balance) {
         this.balance = balance;
     }
-
+    @JsonIgnore
     public Client getMyClient() {
         return myClient;
     }

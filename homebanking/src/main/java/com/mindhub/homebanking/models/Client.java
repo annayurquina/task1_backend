@@ -9,7 +9,7 @@ import java.util.Set;
 @Entity
 public class Client {
     @Id
-    @Column(name="id")
+    //@Column(name="id")
     //@GeneratedValue(strategy=GenerationType.IDENTITY)
     @GeneratedValue(strategy=GenerationType.AUTO,generator="native")
     @GenericGenerator(name = "native", strategy = "native")
